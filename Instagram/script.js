@@ -28,29 +28,3 @@ const posts = [
     }
   ];
 
-  const mainContainer = document.getElementById('main-container');
-
-  posts.forEach(post => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `
-      <img src="${post.avatar}" class="van-img">
-      <div class="info">
-        <h4>${post.name}</h4>
-        <h5>${post.location}</h5>
-      </div>
-      <div>
-        <img src="${post.post}" class="van-gough">
-      </div>
-      <div class="main-icons">
-        <img src="icon-heart.png" class="icons-heart">
-        <img src="icon-comment.png" class="icons-comm">
-        <img src="icon-dm.png" class="icons-msg">
-      </div>
-      <div>
-        <p class="nums">${post.likes} likes</p>
-        <p class="mgs"><span>${post.username}</span> ${post.comment}</p>
-      </div>
-    `;
-    mainContainer.appendChild(card);
-  });
